@@ -17,16 +17,15 @@ var (
 )
 
 type Config struct {
-	AppPort          string
-	DBHost           string
-	DBPort           string
-	DBUser           string
-	DBPassword       string
-	DBName           string
-	JWTSecret        string
-	JWTExpired       string
-	JWTRefreshToken  string
-	JWTExpiryMinutes string
+	AppPort         string
+	DBHost          string
+	DBPort          string
+	DBUser          string
+	DBPassword      string
+	DBName          string
+	JWTSecret       string
+	JWTExpired      string
+	JWTRefreshToken string
 }
 
 func LoadEnv() {
@@ -35,16 +34,15 @@ func LoadEnv() {
 		log.Println("No .env file found.")
 	}
 	AppConfig = &Config{
-		AppPort:          GetEnv("PORT", "3030"),
-		DBHost:           GetEnv("DB_HOST", "localhost"),
-		DBPort:           GetEnv("DB_PORT", "5433"),
-		DBUser:           GetEnv("DB_USER", "postgres"),
-		DBPassword:       GetEnv("DB_PASSWORD", "admin"),
-		DBName:           GetEnv("DB_NAME", "project_management"),
-		JWTSecret:        GetEnv("JWT_SECRET", "supersecret"),
-		JWTExpiryMinutes: GetEnv("JWT_EXPIRY_MINUTES", "6000"),
-		JWTRefreshToken:  GetEnv("REFRESH_TOKEN_EXPIRED", "24h"),
-		JWTExpired:       GetEnv("JWT_EXPIRED", "1h"),
+		AppPort:         GetEnv("PORT", "3030"),
+		DBHost:          GetEnv("DB_HOST", "localhost"),
+		DBPort:          GetEnv("DB_PORT", "5433"),
+		DBUser:          GetEnv("DB_USER", "postgres"),
+		DBPassword:      GetEnv("DB_PASSWORD", "admin"),
+		DBName:          GetEnv("DB_NAME", "project_management"),
+		JWTSecret:       GetEnv("JWT_SECRET", "supersecret"),
+		JWTRefreshToken: GetEnv("REFRESH_TOKEN_EXPIRED", "24h"),
+		JWTExpired:      GetEnv("JWT_EXPIRED", "1h"),
 	}
 }
 
