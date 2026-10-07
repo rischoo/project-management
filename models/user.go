@@ -15,6 +15,6 @@ type User struct {
 	Password   string         `json:"password" db:"password"`
 	Role       string         `json:"role" db:"role"`
 	CreatedAt  time.Time      `json:"created_at" db:"created_at"`
-	UpdateAt   time.Time      `json:"update_at" db:"update_at"`
+	UpdatedAt  time.Time      `json:"updated_at" db:"updated_at"`
 	DeletedAt  gorm.DeletedAt `json:"-" gorm:"index"`
 }
